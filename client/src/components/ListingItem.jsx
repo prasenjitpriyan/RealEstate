@@ -20,7 +20,7 @@ export default function ListingItem({ listing }) {
             {listing.name}
           </p>
           <EmailShareButton
-            url={`https://blog-g77g.onrender.com/listing/${listing._id}`}
+            url={`https://prime-reality.onrender.com/listing/${listing._id}`}
             className="demo"
             subject={"Check out this details!"}
             body={`Please check the property, namely ${listing.name}, is ready to ${listing.type}. The property is located at ${listing.address} and the price is listed for ${listing.regularPrice}$.${listing.description} I thought you might find this page interesting:`}
