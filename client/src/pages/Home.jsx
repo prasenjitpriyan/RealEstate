@@ -56,9 +56,9 @@ export default function Home() {
         </h1>
         <div className="text-secondary text-xs sm:text-sm">
           Prime Reality is the best place to find your next perfect place to
-          live.
+          live and list your property to sell.
           <br />
-          We have a wide range of properties for you to choose from.
+          Please Sign in and procedded with new listing or Rent or Sale the existing one
         </div>
         <Link
           to={"/search"}
