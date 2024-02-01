@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { MdLocationOn } from "react-icons/md";
+import { EmailShareButton, EmailIcon } from "react-share";
 
 export default function ListingItem({ listing }) {
+  console.log(listing);
   return (
     <div className="bg-primary shadow-md hover:shadow-lg transition-shadow overflow-hidden rounded-lg w-full sm:w-[330px]">
       <Link to={`/listing/${listing._id}`}>
@@ -17,6 +19,14 @@ export default function ListingItem({ listing }) {
           <p className="truncate text-lg font-semibold text-body">
             {listing.name}
           </p>
+          <EmailShareButton
+            url={`https://blog-g77g.onrender.com/listing/${listing._id}`}
+            className="demo"
+            subject={"Check out this details!"}
+            body={`Please check the property, namely ${listing.name}, is ready to ${listing.type}. The property is located at ${listing.address} and the price is listed for ${listing.regularPrice}$.${listing.description} I thought you might find this page interesting:`}
+          >
+            <EmailIcon className="h-8 w-8 rounded-full" />
+          </EmailShareButton>
           <div className="flex items-center gap-1">
             <MdLocationOn className="h-4 w-4 text-green" />
             <p className="text-sm text-green truncate w-full">
